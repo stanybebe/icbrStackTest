@@ -18,10 +18,11 @@ Including another URLconf
 
 # backend/myapp/urls.py
 from django.urls import path
-from .views import submit_form
+from .views import message_list, latest_message
 
 urlpatterns = [
-    path('api/submit-form/', submit_form),
+    path('submit-form/', message_list),
+    path('message/',latest_message , name='latest-message'),
 ]
 
 
